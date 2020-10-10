@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/index.js"
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,12 @@
   "homepage": "https://github.com/Newton-School/calculator-api#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "dot-env": "0.0.1",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
-    "react": "^16.13.1"
+    "netlify-lambda": "^2.0.1",
+    "react": "^16.13.1",
+    "serverless-http": "^2.6.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
